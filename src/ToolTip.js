@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import './ToolTip.css';
 function ToolTip(props) {
     const [left, setLeft] = useState();
-    const [right, setRight] = useState();
-    const [bottom, setBottom] = useState();
     const [top, setTop] = useState();
     const toolTip = useRef(null);
 
@@ -21,15 +19,13 @@ function ToolTip(props) {
         else {
             setLeft(props.left + props.width + 10); 
         }
-    },[])
+    },[props])
     return (
         <>
             <div style={{
                         position: "absolute",
                         left: `${left}px`,
-                        top: `${top}px`,
-                        bottom:`${bottom}px`,
-                        right:`${right}px`
+                        top: `${top}px`
                     }}
                     className='toolTip' id='toolTip' ref={toolTip}>
                 Thanks for Hovering.
