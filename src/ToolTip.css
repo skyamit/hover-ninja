@@ -1,0 +1,8 @@
+.toolTip {
+    position: absolute;
+    font-family: monospace;
+    color: #64edff;
+    background-color: #0a0b2f;
+    padding:5px;
+    border-radius: 5px;;
+}
